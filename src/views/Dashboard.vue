@@ -14,6 +14,16 @@
               <i class="bi bi-exclamation-circle"></i> 
               Pastikan barang tidak kosong untuk di sewa, dan update selalu jadwal sewa
             </div>
+
+            <form_barang></form_barang>
+          </div>
+        </div>
+      </div>
+
+      <div class="container bg-custom">
+        <div class="row">
+          <div class="col-5">
+            <latest_customer></latest_customer>
           </div>
         </div>
       </div>
@@ -26,13 +36,17 @@
 import sidebar from '../components/SideBar.vue'
 import navbar_custom from '../components/navbar.vue'
 import infobox from '../components/infobox.vue';
+import form_barang from '../components/dashboard/form_barang.vue';
+import latest_customer from '../components/dashboard/latest_customer.vue';
 
 export default {
   name: 'Dashboard',
   components: {
     sidebar,
     navbar_custom,
-    infobox
+    infobox,
+    form_barang,
+    latest_customer
   }
 };
 </script>
