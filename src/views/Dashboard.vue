@@ -49,9 +49,10 @@ export default {
 
 .bg-custom {
   background-color: white;
-  margin: 20px;
+
   border-radius: 10px;
   padding: 20px;
+  margin-top: 10px;
   box-sizing: border-box;
 }
 
