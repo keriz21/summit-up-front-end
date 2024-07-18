@@ -5,25 +5,33 @@
       <navbar_custom msg="Dashboard"></navbar_custom>
       <infobox>test</infobox>
 
-      <div class="container bg-custom">
+      <div class="container">
         <div class="row">
           <div class="col-12">
-            <h1><b>Form Barang</b></h1>
-            <p>Setiap 1 Bulan form ini akan diperbarui sesuai dari database yang berjalan.</p>
-            <div class="alert alert-danger">
-              <i class="bi bi-exclamation-circle"></i> 
-              Pastikan barang tidak kosong untuk di sewa, dan update selalu jadwal sewa
-            </div>
+            <div class="bg-custom">
+              <h1><b>Form Barang</b></h1>
+              <p>Setiap 1 Bulan form ini akan diperbarui sesuai dari database yang berjalan.</p>
+              <div class="alert alert-danger">
+                <i class="bi bi-exclamation-circle"></i> 
+                Pastikan barang tidak kosong untuk di sewa, dan update selalu jadwal sewa
+              </div>
 
-            <form_barang></form_barang>
+              <form_barang></form_barang>
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="container bg-custom">
+      <div class="container ">
         <div class="row">
           <div class="col-5">
-            <latest_customer></latest_customer>
+            <div class="bg-custom-2">
+              <latest_customer></latest_customer>
+            </div>
+          </div>
+
+          <div class="col-7 bg-custom-2">
+            <h1>ini adalah ikan</h1>
           </div>
         </div>
       </div>
@@ -80,5 +88,14 @@ export default {
 
 .alert {
   margin-top: 15px;
+}
+
+.bg-custom-2 {
+  background-color: white;
+
+  border-radius: 10px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  padding: 20px;
 }
 </style>
