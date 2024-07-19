@@ -1,5 +1,6 @@
 <template>
     <h2><b>Latest Customer</b></h2>
+    
 </template>
 
 <script>
