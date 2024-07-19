@@ -31,7 +31,7 @@
           </div>
 
           <div class="col-7 bg-custom-2">
-            <h1>ini adalah ikan</h1>
+            <!-- <top_product></top_product> -->
           </div>
         </div>
       </div>
@@ -46,6 +46,8 @@ import navbar_custom from '../components/navbar.vue'
 import infobox from '../components/infobox.vue';
 import form_barang from '../components/dashboard/form_barang.vue';
 import latest_customer from '../components/dashboard/latest_customer.vue';
+import top_product from '../components/dashboard/top_product.vue';
+import Top_product from '../components/dashboard/top_product.vue';
 
 export default {
   name: 'Dashboard',
@@ -54,7 +56,8 @@ export default {
     navbar_custom,
     infobox,
     form_barang,
-    latest_customer
+    latest_customer,
+    top_product
   }
 };
 </script>

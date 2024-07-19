@@ -1,0 +1,17 @@
+[
+    {"product_name": "Summit Climbing Backpack", "sales_count": 150},
+    {"product_name": "Mountain Hiking Boots", "sales_count": 200},
+    {"product_name": "High Altitude Tent", "sales_count": 120},
+    {"product_name": "Climbing Rope 30m", "sales_count": 180},
+    {"product_name": "GPS Navigation Device", "sales_count": 160},
+    {"product_name": "Insulated Sleeping Bag", "sales_count": 75},
+    {"product_name": "Weatherproof Jacket", "sales_count": 130},
+    {"product_name": "Portable Water Filter", "sales_count": 90},
+    {"product_name": "Hiking Poles Set", "sales_count": 85},
+    {"product_name": "Compact First Aid Kit", "sales_count": 110},
+    {"product_name": "Summit Expedition Hat", "sales_count": 140},
+    {"product_name": "Climbing Carabiners Set", "sales_count": 100},
+    {"product_name": "Camping Stove", "sales_count": 95},
+    {"product_name": "Thermal Base Layer", "sales_count": 220},
+    {"product_name": "Headlamp with Batteries", "sales_count": 160}
+]
