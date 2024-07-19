@@ -32,6 +32,7 @@
 
           <div class="col-7 bg-custom-2">
             <!-- <top_product></top_product> -->
+            <top_product></top_product>
           </div>
         </div>
       </div>
@@ -57,7 +58,7 @@ export default {
     infobox,
     form_barang,
     latest_customer,
-    top_product
+    Top_product
   }
 };
 </script>

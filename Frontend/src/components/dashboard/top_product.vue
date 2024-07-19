@@ -3,13 +3,24 @@
 
     <ul class="list-group list-group-flush">
         <li class="list-group-item d-flex">
-            <div>
+            <div class="pembeli-name">
                 ikan tongkaol
             </div>
 
             <div class="ms-auto">
-                <p>ikan</p>
-                sales
+                <span class="object-terjual">ikan</span>
+                <span class="object-sale">sales</span>
+            </div>
+        </li>
+
+        <li class="list-group-item d-flex" v-for="item in product">
+            <div class="pembeli-name">
+                {{ item.product_name }}
+            </div>
+
+            <div class="ms-auto">
+                <span class="object-terjual">{{item.sales_count}}</span>
+                <span class="object-sale">sales</span>
             </div>
         </li>
     </ul>
@@ -24,7 +35,7 @@ export default {
         }
     },
     created(){
-
+        this.fetchData()
     },
     methods:{
         fetchData(){
@@ -37,6 +48,35 @@ export default {
                 console.error('Error fetching data:', error)
             })
         }
+    },
+    computed:{
+        product(){
+            const sorted = this.top_product.sort((a,b) => b.sales_count - a.sales_count);
+
+            return sorted.slice(0,5)
+        }
     }
 }
 </script>
+
+<style>
+    .pembeli-name{
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .object-terjual{
+        font-size: 18px;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .object-sales{
+        font-size: 12px;
+    }
+
+    .list-group-item{
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+</style>

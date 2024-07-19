@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container-fluid">
         <div class="row pt-3">
             <div class="col-3 box ">
                 <div class="row align-items-center m-2 box-container">
