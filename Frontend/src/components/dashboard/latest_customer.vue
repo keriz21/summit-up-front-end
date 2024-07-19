@@ -2,29 +2,29 @@
     <h2><b>Latest Customer</b></h2>
     <ul class="list-group list-group-flush">
         <!-- <li class="list-group-item" v-for="angka in number" :key="number">{{ angka }}</li> -->
-        <li class="list-group-item pembeli-item">
+        <li class="list-group-item pembeli-item d-flex">
             <img src="/vite.svg" alt="" class="img-thumbnail">
             <div class="pembeli-details">
                 <div class="pembeli-name">asep setiawan</div>
                 <div class="pembeli-email">example@gmail.com</div>
             </div>
 
-            <div class="pembeli-amount">
+            <div class="pembeli-amount ms-auto">
                 Rp 1.000.000
             </div>
         </li>
 
-        <!-- <li class="list-group-item pembeli-item" v-for="data in latestCustomer">
+        <li class="list-group-item pembeli-item d-flex" v-for="data in latestCustomer">
             <img :src="data.img" alt="" class="img-thumbnail">
             <div class="pembeli-details">
                 <div class="pembeli-name">{{data.name}}</div>
                 <div class="pembeli-email">example@gmail.com</div>
             </div>
 
-            <div class="pembeli-amount">
+            <div class="pembeli-amount ms-auto">
                 Rp {{ formatCurrency(data.purchase_money) }}
             </div>
-        </li> -->
+        </li>
     </ul>
 </template>
 
@@ -79,10 +79,10 @@ export default {
     padding: 10px;;
 }
 
-/* .pembeli-item img {
+.pembeli-item img {
     margin-right: 5px;
     border: none;
-} */
+}
 
 .pembeli-details {
     flex-grow: 1;
