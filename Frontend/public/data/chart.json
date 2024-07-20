@@ -1,0 +1,107 @@
+[
+    {
+        "transaction_id": "TXN0001",
+        "date": "2024-07-01",
+        "type": "credit",
+        "description": "Salary",
+        "amount": 5000000.00
+    },
+    {
+        "transaction_id": "TXN0002",
+        "date": "2024-07-01",
+        "type": "debit",
+        "description": "Groceries",
+        "amount": 150000.00
+    },
+    {
+        "transaction_id": "TXN0003",
+        "date": "2024-07-02",
+        "type": "debit",
+        "description": "Restaurant",
+        "amount": 800000.00
+    },
+    {
+        "transaction_id": "TXN0004",
+        "date": "2024-07-02",
+        "type": "credit",
+        "description": "Freelance Work",
+        "amount": 2000000.00
+    },
+    {
+        "transaction_id": "TXN0005",
+        "date": "2024-07-03",
+        "type": "debit",
+        "description": "Transport",
+        "amount": 500000.00
+    },
+    {
+        "transaction_id": "TXN0006",
+        "date": "2024-07-03",
+        "type": "debit",
+        "description": "Utilities",
+        "amount": 1000000.00
+    },
+    {
+        "transaction_id": "TXN0007",
+        "date": "2024-07-04",
+        "type": "credit",
+        "description": "Gift",
+        "amount": 1500000.00
+    },
+    {
+        "transaction_id": "TXN0008",
+        "date": "2024-07-04",
+        "type": "debit",
+        "description": "Cinema",
+        "amount": 300000.00
+    },
+    {
+        "transaction_id": "TXN0009",
+        "date": "2024-07-05",
+        "type": "debit",
+        "description": "Clothing",
+        "amount": 2000000.00
+    },
+    {
+        "transaction_id": "TXN0010",
+        "date": "2024-07-05",
+        "type": "debit",
+        "description": "Coffee",
+        "amount": 200000.00
+    },
+    {
+        "transaction_id": "TXN0011",
+        "date": "2024-07-06",
+        "type": "credit",
+        "description": "Refund",
+        "amount": 500000.00
+    },
+    {
+        "transaction_id": "TXN0012",
+        "date": "2024-07-06",
+        "type": "debit",
+        "description": "Books",
+        "amount": 600000.00
+    },
+    {
+        "transaction_id": "TXN0013",
+        "date": "2024-07-07",
+        "type": "debit",
+        "description": "Charity",
+        "amount": 1000000.00
+    },
+    {
+        "transaction_id": "TXN0014",
+        "date": "2024-07-07",
+        "type": "debit",
+        "description": "Gym Membership",
+        "amount": 500000.00
+    },
+    {
+        "transaction_id": "TXN0015",
+        "date": "2024-07-07",
+        "type": "credit",
+        "description": "Bonus",
+        "amount": 3000000.00
+    }
+]

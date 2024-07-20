@@ -3,7 +3,7 @@
     <div class="container full-height d-flex justify-content-center align-items-center">
       <div class="row px-5 m-5 w-100 bg-float">
         <div class="col-md-6 d-flex justify-content-center align-items-center">
-          <img :src="summit" alt="" class="img-fluid">
+          <img src="/company.jpg" alt="" class="img-fluid">
         </div>
         <div class="col-md-6">
           <h1>Login</h1>

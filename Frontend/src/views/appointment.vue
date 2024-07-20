@@ -4,6 +4,7 @@ import SideBar from '../components/SideBar.vue';
 import navbar from '../components/navbar.vue';
 import info_n_search from '../components/appointment/info_n_search.vue'
 import infobox from '../components/infobox.vue';
+import form_customer from '../components/appointment/form_customer.vue';
 
 export default {
     name : 'Appointment',
@@ -11,7 +12,8 @@ export default {
         SideBar,
         navbar,
         info_n_search,
-        infobox
+        infobox,
+        form_customer
     }
 }
 
@@ -25,6 +27,10 @@ export default {
             <div class="main-content-2">
                 <info_n_search />
                 <infobox />
+
+                <div>
+                    <form_customer/>
+                </div>
             </div>
         </div>
     </div>
@@ -38,6 +44,7 @@ export default {
   min-height: 100vh;
   /* padding: 20px; */
   box-sizing: border-box;
+  padding-bottom: 20px;
 }
 
 .main-content-2 {

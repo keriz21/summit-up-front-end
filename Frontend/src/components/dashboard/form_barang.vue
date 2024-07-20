@@ -9,8 +9,8 @@
             </tr>
         </thead>
 
-        <tbody v-for="barang in paginatedDate">
-            <tr>
+        <tbody >
+            <tr v-for="barang in paginatedDate">
                 <th scope="row">{{ barang.id }}</th>
                 <td>{{ barang.nama_barang }}</td>
                 <td>{{ barang.jumlah}}</td>
