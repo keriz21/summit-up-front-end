@@ -5,27 +5,41 @@
         <a href="/dashboard" class="nav-link"><i class="bi bi-grid-1x2-fill"></i> Dashboard</a>
       </li>
       <li class="nav-item list-group-item">
-        <a href="/appointment" class="nav-link"><i class="bi bi-calendar-plus"></i> Appointment</a>
+        <a href="/coming-soon" class="nav-link"><i class="bi bi-calendar-plus"></i> Appointment</a>
       </li>
       <li class="nav-item list-group-item">
-        <a href="/payment" class="nav-link"><i class="bi bi-credit-card"></i> Payment</a>
+        <a href="/coming-soon" class="nav-link"><i class="bi bi-credit-card"></i> Payment</a>
       </li>
       <li class="nav-item list-group-item">
-        <a href="/settings" class="nav-link"><i class="bi bi-gear"></i> Settings</a>
+        <a href="/profile" class="nav-link"><i class="bi bi-person-lines-fill"></i> Profile</a>
       </li>
       <li class="nav-item list-group-item">
-        <a href="/logout" class="nav-link"><i class="bi bi-box-arrow-right"></i> Log Out</a>
+        <a @click="logout" class="nav-link"><i class="bi bi-box-arrow-right"></i> Log Out</a>
       </li>
     </ul>
   </div>
   </template>
   
   <script>
+  import axios from 'axios'
+  import config from '../config'
   export default {
     methods: {
       closeNav() {
         // Function to close sidebar if needed
         // You can customize this based on your sidebar behavior
+      },
+      async logout(){
+        try {
+          const apiBaseUrl = `${config.apiBaseUrl}/api/auth/logout`
+          await axios.post('http://localhost:3039/api/auth/logout');
+
+          localStorage.removeItem('token');
+
+          this.$router.push('/login');
+        } catch (error) {
+          console.error('Logout failed: ',error);
+        }
       }
     }
   };

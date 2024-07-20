@@ -11,6 +11,8 @@
             <div class="bg-custom">
               <h1><b>Form Barang</b></h1>
               <p>Setiap 1 Bulan form ini akan diperbarui sesuai dari database yang berjalan.</p>
+              <add_item_button />
+              <item_modal />
               <div class="alert alert-danger">
                 <i class="bi bi-exclamation-circle"></i> 
                 Pastikan barang tidak kosong untuk di sewa, dan update selalu jadwal sewa
@@ -49,6 +51,9 @@ import form_barang from '../components/dashboard/form_barang.vue';
 import latest_customer from '../components/dashboard/latest_customer.vue';
 import top_product from '../components/dashboard/top_product.vue';
 import Top_product from '../components/dashboard/top_product.vue';
+import add_item_button from '../components/dashboard/tambah_barang.vue';
+import item_modal from '../components/dashboard/ItemModal.vue';
+import { mapGetters, mapActions } from 'vuex';
 
 export default {
   name: 'Dashboard',
@@ -58,7 +63,19 @@ export default {
     infobox,
     form_barang,
     latest_customer,
-    Top_product
+    Top_product,
+    add_item_button,
+    item_modal
+  },
+  computed: {
+    ...mapGetters(['getUser'])
+  },
+  methods:{
+    ...mapActions(['logout']),
+    handleLogout(){
+      this.logout();
+      this.$router.push('/login');
+    }
   }
 };
 </script>

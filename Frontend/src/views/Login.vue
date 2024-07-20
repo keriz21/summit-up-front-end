@@ -10,16 +10,19 @@
           <p>Admin Dashboard SummitUp</p>
           <form @submit.prevent="login">
             <div class="mb-3">
-              <label for="email" class="form-label">E-Mail</label>
-              <input type="email" id="email" v-model="username" class="form-control" placeholder="example@gmail.com">
+              <label for="username" class="form-label">Username</label>
+              <input type="text" id="username" v-model="username" class="form-control" placeholder="Username">
             </div>
             <div class="mb-3">
               <label for="password" class="form-label">Password</label>
-              <input type="password" id="password" v-model="password" class="form-control">
+              <input type="password" id="password" v-model="password" class="form-control" placeholder="Password">
             </div>
-            <a href="#">Lupa Password</a>
             <div class="d-grid gap-2">
               <button type="submit" class="btn btn-primary">Login</button>
+            </div>
+            <br>
+            <div class="d-flex">
+              <p class="ms-auto">Belum Punya akun? <a href="/register">Register</a></p>
             </div>
           </form>
         </div>
@@ -29,27 +32,41 @@
 </template>
 
 <script>
-import summit from '../assets/summit.png'
+import axios from 'axios';
+import summit from '../assets/summit.png';
+import config from '../config'
 
 export default {
   data() {
     return {
       username: '',
       password: '',
-      summit
-    }
+      summit,
+      errorMessage: ''
+    };
   },
   methods: {
-    login() {
-      // Perform login logic here
-      console.log('Username:', this.username);
-      console.log('Password:', this.password);
-      
-      // Redirect to dashboard after successful login
-      this.$router.push('/dashboard');
+    async login() {
+      try {
+        console.log(config.apiBaseUrl)
+        const apiUrl = `${config.apiBaseUrl}/auth/login`
+        const response = await axios.post(apiUrl, {
+          username: this.username,
+          password: this.password
+        }, {withCredentials: true});
+        // Handle successful login, e.g., redirect to another page or store token
+        console.log('Login successful:', response.data);
+        localStorage.setItem('token', response.data.token)
+        // You might want to redirect or do something with the response data
+        this.$router.push('/dashboard'); // example redirection
+      } catch (error) {
+        // Handle error, e.g., show an error message
+        console.error('Login failed:', error.response.data);
+        this.errorMessage = 'Login failed. Please check your username and password.';
+      }
     }
   }
-}
+};
 </script>
 
 <style scoped>

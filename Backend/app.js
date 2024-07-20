@@ -1,5 +1,6 @@
 const express = require('express');
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 const sequelize = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
@@ -8,8 +9,18 @@ const dashboardRoutes = require('./routes/dashboardRoutes');
 const transactionRoutes = require('./routes/transactionRoutes');
 
 const app = express();
+
+// Middleware
 app.use(express.json());
 app.use(cookieParser());
+
+// CORS Configuration
+app.use(cors({
+  origin: 'http://localhost:5173', // Izinkan semua origin
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 
 // Documentation Route
 app.get('/', (req, res) => {
@@ -49,6 +60,7 @@ app.get('/', (req, res) => {
     `);
 });
 
+// Route Setup
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
@@ -64,22 +76,3 @@ sequelize.sync({ force: false }).then(() => {
 }).catch(err => {
     console.log('Database connection failed', err);
 });
-
-// var express = require('express');
-// var app = express();
-// app.get('/', function(req, res) {
-// res.send('Hello World! Ini adalah Website Express.js pertama saya');
-// });
-// var port = process.env.PORT || 3000;
-// app.listen(port);console.log('Listening on localhost:'+ port);
-
-
-// var http = require('http');
-// var server = http.createServer(function(req, res) {
-//     res.writeHead(200, {'Content-Type': 'text/plain'});
-//     var message = 'It workshhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh!\n 22222',
-//         version = 'NodeJS ' + process.versions.node + '\n',
-//         response = [message, version].join('\n');
-//     res.end(response);
-// });
-// server.listen();
